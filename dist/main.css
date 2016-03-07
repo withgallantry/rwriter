@@ -6,3 +6,9 @@ html {
 
 .larger {
   height: 140px !important; }
+
+.buttonBottom {
+  float: right; }
+
+.form-group label.control-label {
+  margin-right: 18px !important; }
