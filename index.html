@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>webpack-boilerplate</title>
+
+    <link rel="stylesheet" media="all" href="/dist/main.css">
+    <!-- Bootstrap Material Design -->
+</head>
+<body>
+<h1>NFC Tag Writer</h1>
+
+<div class="bs-component">
+    <ul class="nav nav-tabs" style="margin-bottom: 15px;">
+        <li class="active"><a href="#home" data-toggle="tab" aria-expanded="true">Write
+            <div class="ripple-container"></div>
+        </a></li>
+        <li class=""><a href="#profile" data-toggle="tab" aria-expanded="false">Debug Console
+            <div class="ripple-container"></div>
+        </a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="home">
+
+            <div class="col-md-6">
+                <textarea class="form-control larger" rows="3" id="inputTag">04E5C8A1 12764080 A4480000 E1101200 0103A00C 340300FE 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 A5148CF9 40C150A9 00000000 00000000 000000BD 040000FF 00050000 00000000 00000000 04E5C8A1 12764080 A4480000
+                </textarea>
+
+                <div class="col-md-6">
+                    <select id="characterList" class="form-control">
+
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <a href="" id="writeTag">Generate New Tag</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <textarea class="form-control larger" rows="3" id="outputTag"></textarea>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="profile">
+
+        </div>
+        <div class="tab-pane fade" id="dropdown1">
+            <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+        </div>
+        <div class="tab-pane fade" id="dropdown2">
+            <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>
