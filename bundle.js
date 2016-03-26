@@ -149,6 +149,7 @@
 	function getUid(text) {
 	  var concatUID = text[0].toString('hex') + text[1].toString('hex');
 	  var UID = new Buffer(concatUID, 'hex');
+	  console.log(UID);
 	  UID = UID.toString('hex');
 	  return UID.slice (0, 6) + UID.slice (8);
 	}
@@ -14828,7 +14829,8 @@
 	{ "id":42,	"name":"Wicked Witch",	"world":"Wizard of OZ" },
 	{ "id":43,	"name":"Superwoman",	"world":"DC Comics" },
 	{ "id":44,	"name":"Zane",			"world":"Ninjago" },
-	{ "id":45,	"name":"DOES",			"world":"Ninjago" }
+	{ "id":45,	"name":"Green Arrow",			"world":"DC World" },
+	{ "id":46,	"name":"Supergirl",			"world":"DC World" }
 
 	]
 
@@ -14836,7 +14838,9 @@
 /* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var rotr32 = (a,b)=>((a>>>b)|(a<<(32-b))) >>> 0
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var rotr32 = (a,b) => {
+		return ((a>>>b)|(a<<(32-b))) >>> 0}
+
 	var debug = false
 	function pwdgen(uid) {
 		uid = new Buffer(uid,'hex')
@@ -14849,12 +14853,17 @@
 			var v4 = rotr32(v2,25);
 			var v5 = rotr32(v2,10);
 			var b = base.readUInt32LE(i*4)
+
 			v2 = (b + v4 + v5 - v2) >>> 0;
+
+			console.log(v2.toString(16));
+
 			if(debug) { console.log("[%d] %s %s %s %s", i, v4.toString(16), v5.toString(16), b.toString(16), v2.toString(16)); }
 	 	}
-	 
+
 	 	var b = new Buffer(4)
 	 	b.writeUInt32BE(v2)
+
 	 	v2 = b.readUInt32LE(0)
 	 	return v2.toString(16);
 	}
