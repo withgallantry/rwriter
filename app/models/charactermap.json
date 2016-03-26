@@ -43,6 +43,7 @@ module.exports = [
 { "id":42,	"name":"Wicked Witch",	"world":"Wizard of OZ" },
 { "id":43,	"name":"Superwoman",	"world":"DC Comics" },
 { "id":44,	"name":"Zane",			"world":"Ninjago" },
-{ "id":45,	"name":"DOES",			"world":"Ninjago" }
+{ "id":45,	"name":"Green Arrow",			"world":"DC World" },
+{ "id":46,	"name":"Supergirl",			"world":"DC World" }
 
 ]

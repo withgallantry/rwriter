@@ -27,6 +27,7 @@ function turnIntoArray(text) {
 function getUid(text) {
   var concatUID = text[0].toString('hex') + text[1].toString('hex');
   var UID = new Buffer(concatUID, 'hex');
+  console.log(UID);
   UID = UID.toString('hex');
   return UID.slice (0, 6) + UID.slice (8);
 }
